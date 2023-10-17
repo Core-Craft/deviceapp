@@ -97,6 +97,7 @@ yarn-debug.log*
 yarn-error.log*
 yarn.lock
 .vscode-test/
+.expo/
 
 # Editor directories and files
 .idea/
