@@ -6,6 +6,8 @@ import Welcome5 from "./welcome/welcome5";
 import Register from "./auth/register";
 import Login from "./auth/login";
 import ForgotPassword from "./auth/forgot_pass";
+import Success from "./auth/success";
+
 
 
 
@@ -19,4 +21,5 @@ export {
     Register,
     Login,
     ForgotPassword,
+    Success,
 }
