@@ -3,6 +3,9 @@ import Welcome2 from "./welcome/welcome2";
 import Welcome3 from "./welcome/welcome3";
 import Welcome4 from "./welcome/welcome4";
 import Welcome5 from "./welcome/welcome5";
+import Register from "./auth/register";
+import Login from "./auth/login";
+
 
 
 
@@ -11,5 +14,7 @@ export {
     Welcome2,
     Welcome3,
     Welcome4,
-    Welcome5
+    Welcome5,
+    Register,
+    Login,
 }
