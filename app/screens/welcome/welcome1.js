@@ -16,9 +16,9 @@ const Welcome1 = () => {
           <Text style={styles.brand_suffix}>X</Text>
         </View>
         
-        <SafeAreaView style={styles.slogan}>
+        <View style={styles.slogan}>
           <Text style={styles.brand_slogan}>Everybody Can Train</Text>
-        </SafeAreaView>
+        </View>
           
           <TouchableOpacity style={styles.button} onPress={() => navigateTo('Welcome2')}>
             <Text style={styles.buttonText}>Get Started</Text>
