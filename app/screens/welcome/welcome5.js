@@ -13,7 +13,7 @@ const Welcome5 = ({ navigation }) => {
       <Text style={styles.title}>Improve Sleep Quality</Text>
       <Text style={styles.description}>Improve the quality of your sleep with us, good quality sleep can bring a good mood in the morning</Text>
 
-      <TouchableOpacity style={styles.button} onPress={() => navigateTo('Welcome5')}>
+      <TouchableOpacity style={styles.button} onPress={() => navigateTo('Login')}>
         <Image
           source={require('../../assets/images/welcome3/button.png')} 
           style={styles.loader}
