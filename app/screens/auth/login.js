@@ -32,7 +32,7 @@ const Login = () => {
             </View>
             
             <View style={styles.forgot_pass}>
-                <TouchableOpacity onPress={() => navigateTo('Register')}>
+                <TouchableOpacity onPress={() => navigateTo('ForgotPassword')}>
                     <Text style={styles.forgot_pass_text}>Forgot password?</Text>
                 </TouchableOpacity>
             </View>
