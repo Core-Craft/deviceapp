@@ -11,32 +11,36 @@ export const handleBlur = (inputName, setInputFocused) => {
   };
 
 
-export const TextInputWithIcon = ({ placeholder , secure = false, keyboard}) => {
+  export const TextInputWithIcon = ({ placeholder, secure = false, keyboard, default_value = '' }) => {
     const [userVar, setuserVar] = useState('');
     const [userVarFocused, setuserVarFocused] = useState(false);
     const keyboardType = getKeyboardType(keyboard);
 
-  return (
-    <View style={styles.form}>
+    // Set the value of the TextInput conditionally based on focus
+    const textInputValue = userVarFocused ? default_value : userVar;
+  
+    return (
+      <View style={styles.form}>
         <TextInput
-            keyboardType={keyboardType}
-            secureTextEntry={secure} 
-            style={[styles.input, userVarFocused ? styles.focusedInput : null,]}
-            value={userVar}
-            onChangeText={(value) => setuserVar(value)}
-            placeholder={placeholder}
-            placeholderTextColor='#ADA4A5'
-            onFocus={() => handleFocus('userVar', setuserVarFocused)}
-            onBlur={() => handleBlur('userVar', setuserVarFocused)}
-            
+          keyboardType={keyboardType}
+          secureTextEntry={secure}
+          style={[
+            styles.input,
+            userVarFocused ? styles.focusedInput : null,
+          ]}
+          value={userVar}
+          onChangeText={(value) => setuserVar(value)}
+          placeholder={placeholder}
+          placeholderTextColor="#ADA4A5"
+          onFocus={() => handleFocus('userVar', setuserVarFocused)}
+          onBlur={() => handleBlur('userVar', setuserVarFocused)}
         />
         {/* <View style={styles.icon}>
             <Image source={require('./Upload.png')} style={styles.icon}/>
         </View> */}
-        
-    </View>
-  );
-};
+      </View>
+    );
+  };  
 
 const styles = StyleSheet.create({
     form: {
@@ -73,6 +77,7 @@ const styles = StyleSheet.create({
         borderRadius: 30,
         margin:10,
         padding: 14,
+        paddingLeft:20,
         color: "#92A3FD"
       },
 
