@@ -38,7 +38,7 @@ const Login = () => {
             </View>
             
             <View style={styles.login}>
-            <TouchableOpacity style={styles.login_button} onPress={() => navigateTo('Register')}>
+            <TouchableOpacity style={styles.login_button} onPress={() => navigateTo('Success')}>
                 <Image source={require('../../assets/images/auth/button.png')}/>
                 <Text style={styles.login_text}>Login</Text>
             </TouchableOpacity>

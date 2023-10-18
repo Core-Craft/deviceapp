@@ -3,7 +3,7 @@ import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
-import { Welcome1, Welcome2, Welcome3, Welcome4, Welcome5, Login, Register, ForgotPassword } from './app/screens';
+import { Welcome1, Welcome2, Welcome3, Welcome4, Welcome5, Login, Register, ForgotPassword, Success } from './app/screens';
 
 
 const Stack = createNativeStackNavigator();
@@ -73,6 +73,14 @@ export default function App() {
         <Stack.Screen
           name="ForgotPassword"
           component={ForgotPassword}
+          options={{
+            headerShown: false
+          }}
+        />
+
+        <Stack.Screen
+          name="Success"
+          component={Success}
           options={{
             headerShown: false
           }}
