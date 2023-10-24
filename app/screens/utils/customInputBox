@@ -11,14 +11,19 @@ export const handleBlur = (inputName, setInputFocused) => {
   };
 
 
-  export const TextInputWithIcon = ({ placeholder, secure = false, keyboard, default_value = '' }) => {
+  export const TextInputWithIcon = ({ placeholder, secure = false, keyboard, default_value = '', onChangeText }) => {
     const [userVar, setuserVar] = useState('');
     const [userVarFocused, setuserVarFocused] = useState(false);
     const keyboardType = getKeyboardType(keyboard);
 
     // Set the value of the TextInput conditionally based on focus
     const textInputValue = userVarFocused ? default_value : userVar;
-  
+    
+    const handleTextChange = (text) => {
+      setuserVar(userVar);
+      onTextChange(text); // Pass the input value to the parent component
+    };
+
     return (
       <View style={styles.form}>
         <TextInput
@@ -29,7 +34,8 @@ export const handleBlur = (inputName, setInputFocused) => {
             userVarFocused ? styles.focusedInput : null,
           ]}
           value={userVar}
-          onChangeText={(value) => setuserVar(value)}
+          // onChangeText={(value) => setuserVar(value)}
+          onChangeText={handleTextChange}
           placeholder={placeholder}
           placeholderTextColor="#ADA4A5"
           onFocus={() => handleFocus('userVar', setuserVarFocused)}
